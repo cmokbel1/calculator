@@ -1,29 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <script src="./app.js"></script>
+
     <div id="calculator">
-        <div id="screen"></div>
-        <div class="number"><button type="button">1</button></div>
-        <div class="number"><button type="button">2</button></div>
-        <div class="number"><button type="button">3</button></div>
-        <div class="number"><button type="button">4</button></div>
-        <div class="number"><button type="button">5</button></div>
-        <div class="number"><button type="button">6</button></div>
-        <div class="number"><button type="button">7</button></div>
-        <div class="number"><button type="button">8</button></div>
-        <div class="number"><button type="button">9</button></div>
-        <div class="number"><button type="button">0</button></div>
-        <div class="operator"><button>+</button></div>
-        <div class="operator"><button>-</button></div>
-        <div class="operator"><button>*</button></div>
-        <div class="operator"><button>÷</button></div>
-        <div id="equals"><button>=</button></div>
+        <div id="screen">0</div>
+        <div id="numbers">
+            <button class="number" type="button">1</button>
+            <button class="number" type="button">2</button>
+            <button class="number" type="button">3</button>
+            <button class="number" type="button">4</button>
+            <button class="number" type="button">5</button>
+            <button class="number" type="button">6</button>
+            <button class="number" type="button">7</button>
+            <button class="number" type="button">8</button>
+            <button class="number" type="button">9</button>
+            <button class="number" type="button">0</button>
+            <button class="number" data-action="decimal">.</button>
+            <button class="number" data-action="clear">AC</button>
+        </div>
+        <div class="operators">
+            <button class="operator" data-action="add">+</button>
+            <button class="operator" data-action="subtract">-</button>
+            <button class="operator" data-action="multiply">*</button>
+            <button class="operator" data-action="divide">÷</button>
+            <button id="equals" data-action="calculate">=</button>
+        </div>
     </div>
 </body>
+
 </html>
