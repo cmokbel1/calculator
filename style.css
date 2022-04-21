@@ -3,33 +3,29 @@
     width: 15em;
     background-color: brown;
     display: grid;
+    align-content: center;
 }
+
 #screen {
-    display:block;
     text-align: end;
     width: 80%;
+    height: 2.5em;
     background-color:greenyellow;
 }
-#numbers {
+#buttons {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
 }
 
-.number {
+.number, #AC, #decimal, .operator {
     width: 5em;
-    margin: 0.25em;
-    position: relative;
-}
-
-.operators {
-    width: 1.5em;
-    display: flex;
-    flex-direction: column;
+    height: 5em;
+    font-weight: 600;
 }
 
 #equals {
-    height: 6em;
+    width: 10em;
+    height: 5em;
+    font-weight: 700;
 }

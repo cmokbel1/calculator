@@ -10,11 +10,9 @@
 </head>
 
 <body>
-    <script src="./app.js"></script>
-
     <div id="calculator">
         <div id="screen">0</div>
-        <div id="numbers">
+        <div id="buttons">
             <button class="number" type="button">1</button>
             <button class="number" type="button">2</button>
             <button class="number" type="button">3</button>
@@ -25,17 +23,17 @@
             <button class="number" type="button">8</button>
             <button class="number" type="button">9</button>
             <button class="number" type="button">0</button>
-            <button class="number" data-action="decimal">.</button>
-            <button class="number" data-action="clear">AC</button>
-        </div>
-        <div class="operators">
+            <button id="decimal" data-action="decimal">.</button>
+            <button id="AC" data-action="clear">AC</button>
             <button class="operator" data-action="add">+</button>
             <button class="operator" data-action="subtract">-</button>
-            <button class="operator" data-action="multiply">*</button>
+            <button class="operator" data-action="multiply">x</button>
             <button class="operator" data-action="divide">÷</button>
             <button id="equals" data-action="calculate">=</button>
         </div>
-    </div>
+
+
+        <script src="./app.js"></script>
 </body>
 
 </html>
