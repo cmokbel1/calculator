@@ -1,0 +1,5 @@
+const number = document.querySelectorAll('.number')
+const operator = document.querySelectorAll('.operator')
+const clear = document.getElementById('AC')
+const equals = document.getElementById('equals')
+const decimal = document.getElementById('decimal')
