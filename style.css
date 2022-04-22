@@ -15,10 +15,11 @@
     height: 2.5em;
     background-color:green;
     border: 0.25em solid salmon;
+    font-size:larger;
 }
 
 
-.number, #AC, #decimal, .operator {
+.calc-keys {
     width: 5em;
     height: 5em;
     font-weight: 600;
@@ -28,4 +29,8 @@
     width: 10em;
     height: 5em;
     font-weight: 700;
+}
+
+.is-depressed {
+    background-color: red;
 }
