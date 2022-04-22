@@ -12,6 +12,7 @@ keys.forEach(button => button.addEventListener('click', e => {
 
  
   if (action === 'calculate' && calculator.dataset.previousKeyType === 'operator') {
+    calculator.dataset.previousKeyType = 'calculate'
     const firstValue = calculator.dataset.firstValue;
     const operator = calculator.dataset.operator;
     const secondValue = displayedNum;
@@ -25,10 +26,11 @@ keys.forEach(button => button.addEventListener('click', e => {
     calculator.dataset.previousKeyType = 'operator';
     calculator.dataset.firstValue = displayedNum;
     calculator.dataset.operator = action;
+
   }
 
   if (action ==='clear') {
-    calculator.dataset.previousKeyType = '';
+    calculator.dataset.previousKeyType = 'clear';
     calculator.dataset.firstValue = '';
     calculator.dataset.operator = '';
     display.textContent = '0';
@@ -39,14 +41,14 @@ keys.forEach(button => button.addEventListener('click', e => {
   if (!action) {
     if (displayedNum === '0' || calculator.dataset.previousKeyType === 'operator') {
       display.textContent = keyContent;
-    } else {
+    } else if (displayedNum.length < 16) {
       display.textContent = displayedNum + keyContent;
     }
   }
 
 
   if (action === 'decimal') {
-    if (!displayedNum.includes('.') && calculator.dataset.previousKeyType != 'operator') {
+    if (!displayedNum.includes('.') && calculator.dataset.operator) {
     display.textContent = displayedNum + '.'
     } else if (calculator.dataset.previousKeyType === 'operator') {
       display.textContent = '0.'
