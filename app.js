@@ -11,7 +11,7 @@ keys.forEach(button => button.addEventListener('click', e => {
   const action = key.dataset.action;
 
  
-  if (action === 'calculate' && calculator.dataset.previousKeyType === 'operator') {
+  if (action === 'calculate' && calculator.dataset.operator) {
     calculator.dataset.previousKeyType = 'calculate'
     const firstValue = calculator.dataset.firstValue;
     const operator = calculator.dataset.operator;
@@ -44,6 +44,7 @@ keys.forEach(button => button.addEventListener('click', e => {
     } else if (displayedNum.length < 16) {
       display.textContent = displayedNum + keyContent;
     }
+    calculator.dataset.previousKeyType = 'number'
   }
 
 
