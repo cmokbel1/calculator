@@ -12,7 +12,7 @@ align-items: center;
     text-align: center;
     border: .5em solid rgba(0,212,255,1);
     border-radius: 25px;
-    margin: 5em;
+    margin: 5em; 
 }
 
 #screen {
@@ -26,7 +26,9 @@ align-items: center;
     font-size:larger;
 }
 
-
+#buttons {
+    gap: 0;
+}
 .calc-keys {
     border-radius: 5px;
     width: 5em;
@@ -34,11 +36,15 @@ align-items: center;
     font-weight: 600;
     margin: 0;
 }
+.operator {
+    background-color:antiquewhite;
+}
 
 #equals {
-    width: 10em;
+    width: 10em !important;
     height: 5em;
     font-weight: 700;
+    background-color: orange;
 }
 
 .is-depressed {
