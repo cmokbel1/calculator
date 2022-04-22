@@ -28,6 +28,7 @@ align-items: center;
 
 
 .calc-keys {
+    border-radius: 5px;
     width: 5em;
     height: 5em;
     font-weight: 600;
