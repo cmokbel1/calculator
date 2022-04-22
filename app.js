@@ -20,6 +20,7 @@ keys.forEach(button => button.addEventListener('click', e => {
   }
 
   if (action === 'add' || action === 'subtract' || action === 'multiply' || action === 'divide') {
+    keys.forEach(key => key.classList.remove('is-depressed'))
     key.classList.add('is-depressed');
     calculator.dataset.previousKeyType = 'operator';
     calculator.dataset.firstValue = displayedNum;
