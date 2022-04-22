@@ -13,6 +13,7 @@ align-items: center;
     border: .5em solid rgba(0,212,255,1);
     border-radius: 25px;
     margin: 5em; 
+    box-shadow: 10px 0 10px 5px;
 }
 
 #screen {
