@@ -49,7 +49,7 @@ keys.forEach(button => button.addEventListener('click', e => {
 
 
   if (action === 'decimal') {
-    if (!displayedNum.includes('.') && calculator.dataset.operator) {
+    if (!displayedNum.includes('.')) {
     display.textContent = displayedNum + '.'
     } else if (calculator.dataset.previousKeyType === 'operator') {
       display.textContent = '0.'
