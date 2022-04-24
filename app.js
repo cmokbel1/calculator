@@ -39,7 +39,7 @@ keys.forEach(button => button.addEventListener('click', e => {
 
 
   if (!action) {
-    if (displayedNum === '0' || calculator.dataset.previousKeyType === 'operator') {
+    if (displayedNum === '0' || calculator.dataset.previousKeyType === 'operator' || calculator.dataset.previousKeyType === 'calculate') {
       display.textContent = keyContent;
     } else if (displayedNum.length < 16) {
       display.textContent = displayedNum + keyContent;
