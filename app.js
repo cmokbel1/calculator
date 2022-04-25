@@ -140,19 +140,19 @@ function savedResults() {
   getResults.forEach(result => {
     // if our result has an operator of add we will display a plus sign
     if (result.operator === 'add') {
-      results.innerHTML += `${result.firstValue} + ${result.secondValue} = ${result.total}<br />`
+      results.innerHTML += `<p>${result.firstValue} + ${result.secondValue} = ${result.total}</p>`
     }
     // if our result has an operator of subtract we will display a minus sign
     if (result.operator === 'subtract') {
-      results.innerHTML += `${result.firstValue} - ${result.secondValue} = ${result.total}<br />`
+      results.innerHTML += `<p>${result.firstValue} - ${result.secondValue} = ${result.total}</p>`
     }
     // if our result has an operator of multiple we will display an x
     if (result.operator === 'multiply') {
-      results.innerHTML += `${result.firstValue} x ${result.secondValue} = ${result.total}<br />`
+      results.innerHTML += `<p>${result.firstValue} x ${result.secondValue} = ${result.total}</p>`
     }
     // lastly if our result has an operator of divide we will display a division symbol
     if (result.operator === 'divide') {
-      results.innerHTML += `${result.firstValue} ÷ ${result.secondValue} = ${result.total}< br/>`
+      results.innerHTML += `<p>${result.firstValue} ÷ ${result.secondValue} = ${result.total}</p>`
     }
   })
 }

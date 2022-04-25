@@ -54,13 +54,36 @@ align-items: center;
 }
 
 #calculations {
-    border: 1px solid red;
-    float:right;
-    display: flex;
-    flex-direction: column;
+    display: inline-block;
+    border: .5em solid orange;
+    border-radius: 15px;
+    background-color: rgba(2,0,36,1);
+    color: whitesmoke;
+    max-width: 400px;
+    max-height: 500px;
+    overflow: auto;
 }
 
+#calculations h1 {
+    padding: .25em;
+    text-align: center;
+}
 #results {
     display: block;
     text-align: center;
+    align-items: center;
+}
+
+#results p {
+    background-color: rgba(68,195,146,1);
+    color: black;
+    border: 2px solid orange;
+    border-radius: 5px;
+    width: 80%;
+    margin-left: 10%;
+}
+
+#result > p:hover:after {
+    transition: 0.2s ease-in;
+    transform:scale(1.2)
 }
