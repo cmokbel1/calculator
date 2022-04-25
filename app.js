@@ -2,6 +2,8 @@ const keys = document.querySelectorAll('.calc-keys');
 const display = document.getElementById('screen');
 const calculator = document.getElementById('calculator');
 
+// define an array of objects to contain each calculation
+calcArray = []
 
 keys.forEach(button => button.addEventListener('click', e => {
   // prevent screen refresh
@@ -31,10 +33,15 @@ keys.forEach(button => button.addEventListener('click', e => {
     const savedCalculation = {
       "firstValue": firstValue,
       "operator": operator,
-      "secondValue": secondValue
-    }
+      "secondValue": secondValue,
+      "total": calculate(firstValue, operator, secondValue)
+    };
+    //push the object to the afore mentioned array
+    calcArray.push(savedCalculation)
     //saving that object to the local Storage for later use
-    localStorage.setItem('prevCalc', savedCalculation)
+    localStorage.setItem('prevCalc', JSON.stringify(calcArray));
+    // call the function each time we click calculate to update the document with a saved calculation
+    savedResults();
   }
 
   // if any of the buttoons pressed have an action defined as following
@@ -118,4 +125,34 @@ const calculate = (n1, operator, n2) => {
   }
   // lastly we return the result
   return result
+}
+
+// to display our saved calculations we need to create a loop of the information that is saved to the localStorage and place it inside the calculate conditional
+function savedResults() {
+  // define and grab the document element that we want to edit
+  const results = document.getElementById('results')
+  // after we define the element we must clear it so that repeated values do not double on the screen
+  results.innerHTML = ' '
+  //  define and grab the information from our localStorage
+  const getResults = JSON.parse(localStorage.getItem('prevCalc') || "[]")
+  console.log(getResults)
+  //loop through the results
+  getResults.forEach(result => {
+    // if our result has an operator of add we will display a plus sign
+    if (result.operator === 'add') {
+      results.innerHTML += `${result.firstValue} + ${result.secondValue} = ${result.total}<br />`
+    }
+    // if our result has an operator of subtract we will display a minus sign
+    if (result.operator === 'subtract') {
+      results.innerHTML += `${result.firstValue} - ${result.secondValue} = ${result.total}<br />`
+    }
+    // if our result has an operator of multiple we will display an x
+    if (result.operator === 'multiply') {
+      results.innerHTML += `${result.firstValue} x ${result.secondValue} = ${result.total}<br />`
+    }
+    // lastly if our result has an operator of divide we will display a division symbol
+    if (result.operator === 'divide') {
+      results.innerHTML += `${result.firstValue} ÷ ${result.secondValue} = ${result.total}< br/>`
+    }
+  })
 }

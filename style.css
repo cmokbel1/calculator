@@ -56,4 +56,11 @@ align-items: center;
 #calculations {
     border: 1px solid red;
     float:right;
+    display: flex;
+    flex-direction: column;
+}
+
+#results {
+    display: block;
+    text-align: center;
 }
