@@ -12,7 +12,7 @@ body {
     text-align: center;
     border: .5em solid rgba(0, 212, 255, 1);
     border-radius: 25px;
-    margin: 5em;
+    margin-top: 5em;
     box-shadow: 10px 0 10px 5px;
 }
 
@@ -58,6 +58,7 @@ body {
     border: .5em solid orange;
     border-radius: 15px;
     background-color: rgba(2, 0, 36, 1);
+    margin-top: 5em;
     color: whitesmoke;
     max-width: 400px;
     max-height: 500px;
