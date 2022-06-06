@@ -7,34 +7,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div id="calculator">
-        <div id="screen">0</div>
-        <div id="buttons">
-            <button class="calc-keys" type="button">1</button>
-            <button class="calc-keys" type="button">2</button>
-            <button class="calc-keys" type="button">3</button>
-            <button class="calc-keys" type="button">4</button>
-            <button class="calc-keys" type="button">5</button>
-            <button class="calc-keys" type="button">6</button>
-            <button class="calc-keys" type="button">7</button>
-            <button class="calc-keys" type="button">8</button>
-            <button class="calc-keys" type="button">9</button>
-            <button class="calc-keys" type="button">0</button>
-            <button class="calc-keys" data-action="decimal">.</button>
-            <button class="calc-keys operator" data-action="clear">AC</button>
-            <button class="calc-keys operator" data-action="add">+</button>
-            <button class="calc-keys operator" data-action="subtract">-</button>
-            <button class="calc-keys operator" data-action="multiply">x</button>
-            <button class="calc-keys operator" data-action="divide">÷</button>
-            <button class="calc-keys" id="equals" data-action="calculate">=</button>
+    <div class="container text-center align-content-center p-3">
+        <div id="calculator" class="container border border-dark rounded">
+            <div id="screen">0</div>
+            <div id="buttons" class="row">
+                <button class="calc-keys col" type="button">1</button>
+                <button class="calc-keys col" type="button">2</button>
+                <button class="calc-keys col" type="button">3</button>
+            </div>
+            <div class="row">
+                <button class="calc-keys col" type="button">4</button>
+                <button class="calc-keys col" type="button">5</button>
+                <button class="calc-keys col" type="button">6</button>
+            </div>
+            <div class="row">
+                <button class="calc-keys col" type="button">7</button>
+                <button class="calc-keys col" type="button">8</button>
+                <button class="calc-keys col" type="button">9</button>
+            </div>
+            <div class="row">
+                <button class="calc-keys col" type="button">0</button>
+                <button class="calc-keys col" data-action="decimal">.</button>
+                <button class="calc-keys col operator" data-action="clear">AC</button>
+            </div>
+            <div class="row">
+                <button class="calc-keys col operator" data-action="add">+</button>
+                <button class="calc-keys col operator" data-action="subtract">-</button>
+                <button class="calc-keys col operator" data-action="multiply">x</button>
+            </div>
+            <div class="row">
+                <button class="calc-keys col-4 operator" data-action="divide">÷</button>
+                <button class="calc-keys" id="equals" data-action="calculate">=</button>
+            </div>
         </div>
-    </div>
-    <div id="calculations">
-        <h1>Calculations</h1>
-        <div id="results"></div>
+        <div id="calculations" class="container">
+            <h1>Calculations</h1>
+            <div id="results"></div>
+        </div>
     </div>
 
 
