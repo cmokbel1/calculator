@@ -1,8 +1,8 @@
 body {
-background-image: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(68,195,146,1) 52%, rgba(0,212,255,1) 100%);
-display: flex;
-justify-content: center;
-align-items: center;
+    background-image: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(68, 195, 146, 1) 52%, rgba(0, 212, 255, 1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #calculator {
@@ -10,9 +10,9 @@ align-items: center;
     background-color: rosybrown;
     display: grid;
     text-align: center;
-    border: .5em solid rgba(0,212,255,1);
+    border: .5em solid rgba(0, 212, 255, 1);
     border-radius: 25px;
-    margin: 5em; 
+    margin: 5em;
     box-shadow: 10px 0 10px 5px;
 }
 
@@ -20,16 +20,17 @@ align-items: center;
     margin-left: 8%;
     margin-top: 1em;
     text-align: right;
-    width: 80%;
+    width: 95%;
     height: 2.5em;
-    background-color:green;
-    border: 0.25em solid rgba(0,212,255,1);
-    font-size:larger;
+    background-color: green;
+    border: 0.25em solid rgba(0, 212, 255, 1);
+    font-size: larger;
 }
 
 #buttons {
     gap: 0;
 }
+
 .calc-keys {
     border-radius: 5px;
     width: 5em;
@@ -37,12 +38,12 @@ align-items: center;
     font-weight: 600;
     margin: 0;
 }
+
 .operator {
-    background-color:antiquewhite;
+    background-color: antiquewhite;
 }
 
 #equals {
-    width: 9em;
     height: 5em;
     font-weight: 700;
     background-color: orange;
@@ -57,7 +58,7 @@ align-items: center;
     display: inline-block;
     border: .5em solid orange;
     border-radius: 15px;
-    background-color: rgba(2,0,36,1);
+    background-color: rgba(2, 0, 36, 1);
     color: whitesmoke;
     max-width: 400px;
     max-height: 500px;
@@ -69,6 +70,7 @@ align-items: center;
     padding: .25em;
     text-align: center;
 }
+
 #results {
     display: block;
     text-align: center;
@@ -76,7 +78,7 @@ align-items: center;
 }
 
 #results p {
-    background-color: rgba(68,195,146,1);
+    background-color: rgba(68, 195, 146, 1);
     color: black;
     border: 2px solid orange;
     border-radius: 5px;
@@ -84,7 +86,7 @@ align-items: center;
     margin-left: 10%;
 }
 
-#result > p:hover:after {
+#result>p:hover:after {
     transition: 0.2s ease-in;
-    transform:scale(1.2)
+    transform: scale(1.2)
 }
