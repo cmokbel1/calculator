@@ -135,7 +135,6 @@ function savedResults() {
   results.innerHTML = ' '
   //  define and grab the information from our localStorage
   const getResults = JSON.parse(localStorage.getItem('prevCalc') || "[]")
-  console.log(getResults)
   //loop through the results
   getResults.forEach(result => {
     // if our result has an operator of add we will display a plus sign
